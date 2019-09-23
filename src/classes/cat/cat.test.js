@@ -25,4 +25,18 @@ describe('Cat', () => {
       expect(console.log).toHaveBeenCalledWith('Raaaawr');
     });
   });
+
+  describe('color', () => {
+    let cat;
+    let color;
+
+    beforeEach(() => {
+      cat = new Cat();
+      color = cat.color;
+    });
+
+    it('returns the cat\'s color', () => {
+      expect(color).toEqual('white');
+    });
+  });
 });
